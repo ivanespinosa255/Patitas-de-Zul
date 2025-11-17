@@ -1,0 +1,534 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+/* Menu de navegacion */
+header {
+  background: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  background: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative; 
+}
+
+nav a {
+  display: block;
+  padding: 10px 45px;
+  text-decoration: none;
+  color: #e53935;
+  font-family: 'Outfit', sans-serif;
+  transition: 0.5s;
+  font-size: 25px;
+  border-radius: 120px;
+}
+
+nav a:hover {
+  background: #d1d1d1;
+  transform: scale(1.08);
+  border-radius: 120px;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transform: scale(1.00);
+}
+
+
+/* Inicio */
+#inicio {
+  position: relative;
+  padding: 120px 20px;
+  color: white;
+  background: linear-gradient(#2F2424, #FFECC4);
+  background-size: 100%;
+  background-position: center;
+  height: 64vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); 
+  z-index: 1;
+}
+
+#inicio * {
+  position: relative;
+  z-index: 2;
+}
+
+#inicio h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+#inicio h2 {
+  text-align: center;
+  font-family: "Playwrite AU TAS", cursive;
+  font-weight: 600;
+  font-size: 3em;
+  color: #ffe082;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#inicio h3 {
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.6;
+  color: #f1f1f1;
+  font-family: "Quicksand", sans-serif;
+}
+
+#inicio p {
+  font-size: 1.5em;
+  max-width: 1037px;
+  line-height: 1.6;
+  color: #f1f1f1;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+
+#inicio button {
+  background-color: #ffca28;
+  border: none;
+  color: #333;
+  padding: 12px 25px;
+  font-size: 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 50px;
+}
+
+#inicio button:hover {
+  background-color: #ffe082;
+  transform: scale(1.05);
+}
+
+
+/* Peluqueria */
+#peluqueria {
+  background: linear-gradient(to bottom, #facd99 0%, #f5e4cc 40%);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#peluqueria h2{
+  margin-top: 20px;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 5em;
+  color: #be7f5a;
+  text-shadow: 2.5px 2px #6e3d17;
+}
+
+#abstiene {
+  font-size: 22px;
+  color: #940000;
+  font-family: "Quicksand", sans-serif;
+}
+
+.peluqueria-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.peluqueria {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.peluqueria:hover {
+  transform: scale(1.05);
+}
+
+.peluqueria img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.peluqueria p {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+
+/* Galeria */
+#galeria {
+  padding: 60px 20px;
+  background: #faebee;
+  text-align: center;
+}
+
+#galeria h2 {
+  margin-top: 35px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 4em;
+  color: #df7b74;
+  text-shadow: 2.5px 2px #772d28;
+  margin-bottom: 50px;
+}
+
+.galeria-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+
+.galeria-contenedor p{
+  color: #333;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+
+.card-dos {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  width: 190px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-dos .card-img {
+  width: 100%;
+  height: 300px; /* Lo podés ajustar para que quede más cuadrado o más rectangular */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-dos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-dos:hover {
+  transform: scale(1.04);
+}
+
+.card-dos p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #333;
+}
+
+
+/* Guarderia */
+#guarderia {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(#f0f8e8, #d8f0c3);
+}
+
+#guarderia h2 {
+  margin-top: 35px;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 4em;
+  color: #6bbb52;
+  text-shadow: 2.5px 2px #305226;
+  margin-bottom: 20px;
+}
+
+#guarderia p {
+  text-align: center;
+  font-size: 1.5em;
+  color: #000000;
+  font-family: "Quicksand", sans-serif;
+}
+
+#guarderia ul {
+  display: inline-block;
+  list-style-type: disc;
+  text-align: left;
+  font-size: 1.5em;
+  color: #000000;
+  font-family: "Quicksand", sans-serif;
+}
+
+#guarderia video {
+  width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#guarderia .video-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 700px;
+  max-width: 90%; /* Para que se achique en pantallas chicas */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  transition: transform 0.3s;
+  margin-bottom: 40px;
+}
+
+#guarderia .video-card:hover {
+  transform: scale(1.04);
+}
+
+#guarderia .video-card video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+/* Contacto */
+#contacto {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(#797979, #4d4d4d);
+  color: #fff;
+}
+
+#contacto h2{
+  margin-top: 40px;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 4em;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+#contacto p{
+  font-size: 2em;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-family: "Quicksand", sans-serif;
+}
+
+#contacto a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#contacto a:hover {
+  color: #fada72;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 22px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 40px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2em;
+}
+
+.btn-whatsapp:hover {
+  background-color: rgb(20, 143, 69);
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #292929;
+  color: white;
+  font-size: 20px;
+  font-family: "Playwrite AU TAS", cursive;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  /* tablets y pantallas medianas */
+  #inicio h1 {
+    font-size: 5em;
+  }
+  #inicio h2 {
+    font-size: 2.2em;
+  }
+  #inicio h3 {
+    font-size: 1.8em;
+  }
+  #inicio p {
+    font-size: 1.2em;
+    max-width: 90%;
+  }
+  nav a {
+    padding: 10px 25px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* celulares en horizontal */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+
+  #inicio {
+    height: 65vh;
+    padding: 80px 10px;
+    background-size: cover; 
+  }
+
+  #inicio h1 {
+    font-size: 3em;
+  }
+  #inicio h2 {
+    font-size: 1.8em;
+  }
+  #inicio h3 {
+    font-size: 1.2em;
+  }
+  #inicio p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .galeria-contenedor,
+  .servicios-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .servicio {
+    width: 90%;
+  }
+
+  #contacto p {
+    font-size: 1.3em;
+  }
+
+  #contacto h2 {
+    font-size: 2.5em;
+  }
+
+  .btn-whatsapp {
+    padding: 15px 25px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* para celus mas chicos */
+  #inicio h1 {
+    font-size: 2.5em;
+  }
+  #inicio h2 {
+    font-size: 1.4em;
+  }
+  #inicio h3 {
+    font-size: 1em;
+  }
+  #inicio p {
+    font-size: 0.9em;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  #galeria h2, #servicios h2, #contacto h2 {
+    font-size: 2em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
